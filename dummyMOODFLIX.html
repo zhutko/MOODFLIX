@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodFlix - Redeeming Love</title>
+    <link rel="stylesheet" href="dummyMOODFLIX.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-film"></i></span>
+            <h1>Mood<span>Flix</span></h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Genre</a>
+            <a href="#">About Us</a>
+        </nav>
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+            <i class="fas fa-globe"></i>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="side-item active">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="side-item">
+                <i class="fas fa-quote-left"></i>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="movie-info">
+                <h1 class="movie-title">Redeeming love</h1>
+                
+                <div class="rating-container">
+                    <div class="rating-pill">
+                        <span class="rating-label">RATING:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-value">4.7</span>
+                    </div>
+                </div>
+
+                <p class="meta-data">2022 | 16+ | 2h 14 m | Romance</p>
+
+                <p class="synopsis">
+                    "Redeeming Love" adalah sinopsis film dan novel drama romantis yang berlatar California tahun 1850, 
+                    bercerita tentang Sarah yang berubah nama menjadi Angel. Setelah masa kecil yang traumatis, ia menjadi 
+                    pelacur dan dipertemukan dengan Michael Hosea, seorang petani dengan iman yang kuat. Kisah cinta mereka 
+                    menguji cinta tanpa syarat saat Michael berusaha menebus dan menyembuhkan Angel dari masa lalunya, 
+                    yang terinspirasi dari kisah Alkitab tentang Nabi Hosea dan Gomer.
+                </p>
+            </div>
+
+            <div class="media-section">
+                <div class="video-trailer" id="videoContainer1">
+                    <video class="mainVideo" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=600">
+                        <source src="video trailer/LalaLand.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay playBtn">
+                        <i class="fas fa-play playIcon"></i>
+                    </div>
+                    <div class="video-controls videoControls">
+                        <div class="progress-container progressContainer">
+                            <div class="progress-bar progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="currentTime">0:00</span>
+                            <span>/</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up volumeIcon"></i>
+                        </div>
+                        <div class="fullscreen-btn fullscreenBtn">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="trailer-title-no-js">REDEEMING <span>LOVE</span></div>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=300" alt="Scene 1">
+                    <img src="https://images.unsplash.com/photo-1512106335121-62945ed8a121?auto=format&fit=crop&q=80&w=300" alt="Scene 2">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=300" alt="Scene 3">
+                </div>
+            </div>
+
+            <!-- Divider for visual separation (optional, but good for spacing) -->
+            <div style="grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+            <!-- Movie Info 2 (The Notebook) -->
+            <div class="movie-info">
+                <h1 class="movie-title">The Notebook</h1>
+                
+                <div class="rating-container">
+                    <div class="rating-pill">
+                        <span class="rating-label">RATING:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-value">4.8</span>
+                    </div>
+                </div>
+
+                <p class="meta-data">2004 | 13+ | 2h 3m | Romance/Drama</p>
+
+                <p class="synopsis">
+                    Seorang pria tua membacakan kisah dari buku catatan kepada seorang wanita di panti jompo. Kisah itu tentang cinta abadi pasangan muda, Noah dan Allie, yang terpisah oleh perang dan perbedaan kelas sosial, namun dipertemukan kembali oleh takdir.
+                </p>
+            </div>
+
+            <!-- Media Section 2 (The Notebook) -->
+            <div class="media-section">
+                <div class="video-trailer" id="videoContainer2">
+                    <video class="mainVideo" poster="https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&q=80&w=600">
+                        <source src="Lalaland.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay playBtn">
+                        <i class="fas fa-play playIcon"></i>
+                    </div>
+                    <div class="video-controls videoControls">
+                        <div class="progress-container progressContainer">
+                            <div class="progress-bar progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="currentTime">0:00</span>
+                            <span>/</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up volumeIcon"></i>
+                        </div>
+                        <div class="fullscreen-btn fullscreenBtn">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="trailer-title-no-js">THE <span>NOTEBOOK</span></div>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&q=80&w=300" alt="Scene 1">
+                    <img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?auto=format&fit=crop&q=80&w=300" alt="Scene 2">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=300" alt="Scene 3">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div style="grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+            <!-- Movie Info 3 (Pride & Prejudice) -->
+            <div class="movie-info">
+                <h1 class="movie-title">Pride & Prejudice</h1>
+                
+                <div class="rating-container">
+                    <div class="rating-pill">
+                        <span class="rating-label">RATING:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-value">4.6</span>
+                    </div>
+                </div>
+
+                <p class="meta-data">2005 | 13+ | 2h 9m | Romance/Drama</p>
+
+                <p class="synopsis">
+                    Elizabeth Bennet yang cerdas dan berpendirian teguh bertemu dengan Mr. Darcy yang kaya namun sombong. Hubungan mereka diwarnai oleh prasangka dan kesalahpahaman sebelum akhirnya menyadari perasaan cinta yang tulus satu sama lain.
+                </p>
+            </div>
+
+            <div class="media-section">
+                <div class="video-trailer" id="videoContainer3">
+                    <video class="mainVideo" poster="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?auto=format&fit=crop&q=80&w=600">
+                        <source src="Lalaland.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay playBtn">
+                        <i class="fas fa-play playIcon"></i>
+                    </div>
+                    <div class="video-controls videoControls">
+                        <div class="progress-container progressContainer">
+                            <div class="progress-bar progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="currentTime">0:00</span>
+                            <span>/</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up volumeIcon"></i>
+                        </div>
+                        <div class="fullscreen-btn fullscreenBtn">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="trailer-title-no-js">PRIDE & <span>PREJUDICE</span></div>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <img src="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?auto=format&fit=crop&q=80&w=300" alt="Scene 1">
+                    <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=300" alt="Scene 2">
+                    <img src="https://images.unsplash.com/photo-1463947628408-f8581a2f4aca?auto=format&fit=crop&q=80&w=300" alt="Scene 3">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div style="grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+            <!-- Movie Info 4 (A Walk to Remember) -->
+            <div class="movie-info">
+                <h1 class="movie-title">A Walk to Remember</h1>
+                
+                <div class="rating-container">
+                    <div class="rating-pill">
+                        <span class="rating-label">RATING:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-value">4.3</span>
+                    </div>
+                </div>
+
+                <p class="meta-data">2002 | 13+ | 1h 41m | Romance/Coming-of-age</p>
+
+                <p class="synopsis">
+                    Landon Carter, seorang siswa populer yang nakal, jatuh cinta pada Jamie Sullivan, putri pendeta yang konservatif dan polos. Hubungan mereka mengubah hidup Landon selamanya saat ia mengetahui rahasia besar yang disimpan Jamie.
+                </p>
+            </div>
+
+            <div class="media-section">
+                <div class="video-trailer" id="videoContainer4">
+                    <video class="mainVideo" poster="https://images.unsplash.com/photo-1501432377862-3d0432b87a14?auto=format&fit=crop&q=80&w=600">
+                        <source src="Lalaland.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay playBtn">
+                        <i class="fas fa-play playIcon"></i>
+                    </div>
+                    <div class="video-controls videoControls">
+                        <div class="progress-container progressContainer">
+                            <div class="progress-bar progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="currentTime">0:00</span>
+                            <span>/</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up volumeIcon"></i>
+                        </div>
+                        <div class="fullscreen-btn fullscreenBtn">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="trailer-title-no-js">A WALK TO <span>REMEMBER</span></div>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <img src="https://images.unsplash.com/photo-1518176258769-f227c798150e?auto=format&fit=crop&q=80&w=300" alt="Scene 1">
+                    <img src="https://images.unsplash.com/photo-1501432377862-3d0432b87a14?auto=format&fit=crop&q=80&w=300" alt="Scene 2">
+                    <img src="https://images.unsplash.com/photo-1512106335121-62945ed8a121?auto=format&fit=crop&q=80&w=300" alt="Scene 3">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div style="grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+            <!-- Movie Info 5 (Me Before You) -->
+            <div class="movie-info">
+                <h1 class="movie-title">Me Before You</h1>
+                
+                <div class="rating-container">
+                    <div class="rating-pill">
+                        <span class="rating-label">RATING:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-value">4.5</span>
+                    </div>
+                </div>
+
+                <p class="meta-data">2016 | 13+ | 1h 50m | Romance/Drama</p>
+
+                <p class="synopsis">
+                    Louisa Clark, seorang gadis desa yang ceria, menjadi perawat bagi Will Traynor, seorang bankir sukses yang lumpuh akibat kecelakaan. Keduanya menjalin ikatan yang tak terduga yang mengubah pandangan hidup mereka masing-masing.
+                </p>
+            </div>
+
+            <div class="media-section">
+                <div class="video-trailer" id="videoContainer5">
+                    <video class="mainVideo" poster="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?auto=format&fit=crop&q=80&w=600">
+                        <source src="Lalaland.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay playBtn">
+                        <i class="fas fa-play playIcon"></i>
+                    </div>
+                    <div class="video-controls videoControls">
+                        <div class="progress-container progressContainer">
+                            <div class="progress-bar progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="currentTime">0:00</span>
+                            <span>/</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up volumeIcon"></i>
+                        </div>
+                        <div class="fullscreen-btn fullscreenBtn">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="trailer-title-no-js">ME BEFORE <span>YOU</span></div>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?auto=format&fit=crop&q=80&w=300" alt="Scene 1">
+                    <img src="https://images.unsplash.com/photo-1507924538820-ede94a04019d?auto=format&fit=crop&q=80&w=300" alt="Scene 2">
+                    <img src="https://images.unsplash.com/photo-1513151280442-25f55a38f3l9?auto=format&fit=crop&q=80&w=300" alt="Scene 3">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div style="grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+            <!-- Movie Info 6 (La La Land) -->
+            <div class="movie-info">
+                <h1 class="movie-title">La La Land</h1>
+                
+                <div class="rating-container">
+                    <div class="rating-pill">
+                        <span class="rating-label">RATING:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-value">4.9</span>
+                    </div>
+                </div>
+
+                <p class="meta-data">2016 | 13+ | 2h 8m | Musical/Romance</p>
+
+                <p class="synopsis">
+                    Seorang pianis jazz bernama Sebastian dan seorang aktris yang bercita-cita tinggi bernama Mia jatuh cinta di Los Angeles. Namun, ambisi karir mereka masing-masing mulai mengancam hubungan asmara yang telah mereka bangun.
+                </p>
+            </div>
+
+            <div class="media-section">
+                <div class="video-trailer" id="videoContainer6">
+                    <video class="mainVideo" poster="https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&q=80&w=600">
+                        <source src="Lalaland.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay playBtn">
+                        <i class="fas fa-play playIcon"></i>
+                    </div>
+                    <div class="video-controls videoControls">
+                        <div class="progress-container progressContainer">
+                            <div class="progress-bar progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="currentTime">0:00</span>
+                            <span>/</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up volumeIcon"></i>
+                        </div>
+                        <div class="fullscreen-btn fullscreenBtn">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="trailer-title-no-js">LA LA <span>LAND</span></div>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&q=80&w=300" alt="Scene 1">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300" alt="Scene 2">
+                    <img src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?auto=format&fit=crop&q=80&w=300" alt="Scene 3">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <span>@2025MoodFlix</span>
+            <span class="divider">|</span>
+            <span>Hak Cipta Dilindungi</span>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+        </div>
+    </footer>
+
+    <script>
+        function initVideoPlayer(container) {
+            const video = container.querySelector('.mainVideo');
+            const playBtn = container.querySelector('.playBtn');
+            const playIcon = container.querySelector('.playIcon');
+            const progressBar = container.querySelector('.progressBar');
+            const progressContainer = container.querySelector('.progressContainer');
+            const currentTimeEl = container.querySelector('.currentTime');
+            const durationEl = container.querySelector('.duration');
+            const volumeIcon = container.querySelector('.volumeIcon');
+            const fullscreenBtn = container.querySelector('.fullscreenBtn');
+            const videoControls = container.querySelector('.videoControls');
+
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            function showPlayButton() {
+                playBtn.style.opacity = '1';
+                playBtn.style.transform = 'translate(-50%, -50%) scale(1)';
+                playIcon.className = 'fas fa-play playIcon';
+            }
+
+            function hidePlayButton() {
+                playBtn.style.opacity = '0';
+                playBtn.style.transform = 'translate(-50%, -50%) scale(0.8)';
+            }
+
+            function togglePlay() {
+                if (video.paused) {
+                    video.play();
+                    hidePlayButton();
+                    playIcon.className = 'fas fa-pause playIcon';
+                } else {
+                    video.pause();
+                    showPlayButton();
+                }
+            }
+
+            video.addEventListener('loadedmetadata', function() {
+                durationEl.textContent = formatTime(video.duration);
+            });
+
+            video.addEventListener('timeupdate', function() {
+                const percent = (video.currentTime / video.duration) * 100;
+                progressBar.style.width = percent + '%';
+                currentTimeEl.textContent = formatTime(video.currentTime);
+            });
+
+            progressContainer.addEventListener('click', function(e) {
+                const rect = progressContainer.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                video.currentTime = percent * video.duration;
+            });
+
+            volumeIcon.addEventListener('click', function() {
+                video.muted = !video.muted;
+                volumeIcon.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+            });
+
+            fullscreenBtn.addEventListener('click', function() {
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                } else {
+                    container.requestFullscreen();
+                }
+            });
+
+            playBtn.addEventListener('click', togglePlay);
+            video.addEventListener('click', togglePlay);
+
+            video.addEventListener('pause', function() {
+                showPlayButton();
+            });
+
+            video.addEventListener('play', function() {
+                hidePlayButton();
+            });
+
+            video.addEventListener('ended', function() {
+                showPlayButton();
+                progressBar.style.width = '0%';
+            });
+        }
+
+        // Initialize all video players
+        const videoContainers = document.querySelectorAll('.video-trailer');
+        videoContainers.forEach(container => {
+            initVideoPlayer(container);
+        });
+    </script>
+
+</body>
+</html>

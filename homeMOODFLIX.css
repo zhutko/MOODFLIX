@@ -1,0 +1,379 @@
+:root {
+  --yellow: #f5c518;
+  --black: #141414;
+  --white: #fcfcfb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* Header */
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: var(--black);
+    box-shadow: 0px 1.5px 1px var(--white);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    color: var(--yellow);
+    font-size: 24px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    position: relative;
+    border: 1px solid #777;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    outline: none;
+    width: 150px;
+}
+
+.header-right i {
+    cursor: pointer;
+    font-size: 18px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--yellow);
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Container Layout */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+/* Sidebar */
+
+.sidebar {
+  position: absolute;
+  width: 72px; /* Lebar awal yang ramping (hanya ikon) */
+  height: 100vh;
+  background-color: var(--black);
+  padding-top: 10px;
+  position: fixed;
+  overflow-y: auto;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Efek transisi halus */
+  box-shadow: 1.5px 0 1px var(--white);
+  white-space: nowrap; /* Mencegah teks turun ke bawah saat menyempit */
+  z-index: 100;
+}
+
+/* Saat sidebar di-hover, lebarnya berubah */
+.sidebar:hover {
+  width: 240px;
+}
+
+.nav-item {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px; /* Padding ini menjaga posisi ikon tetap di tengah saat ramping */
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 8px;
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.icon {
+  min-width: 24px; /* Kunci agar ikon tidak gepeng saat sidebar mengecil */
+  margin-right: 24px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  margin-left: 40px;
+  font-size: 14px;
+  color: var(--yellow);
+  opacity: 1; /* Teks tidak terlihat saat ramping */
+}
+
+/* Munculkan teks dengan halus saat sidebar di-hover */
+.sidebar:hover .text {
+  margin-left: 10px;
+  opacity: 1;
+  color: var(--black);
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+/* Sembunyikan sub-menu secara default */
+.sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: var(--black);
+  margin-top: 5px;
+  border-radius: 8px;
+}
+
+/* KUNCI: Saat menu-wrapper di-hover, sub-menu terbuka */
+.menu-wrapper:hover .sub-menu {
+  max-height: 200px; /* Beri nilai yang cukup untuk semua item */
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+/* Tambahan: Pastikan sub-menu cuma bisa kebuka kalau sidebar lagi lebar */
+.sidebar:not(:hover) .sub-menu {
+  max-height: 0 !important;
+}
+
+.sub-item {
+  padding: 8px 10px 8px 52px;
+  font-size: 13px;
+  color: var(--yellow);
+  cursor: pointer;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sub-item :hover {
+  color: var(--white);
+  text-decoration-thickness: var(--white);
+}
+
+.sub-item p {
+  font-weight: 500;
+  color: var(--yellow);
+  padding-top: 10px;
+}
+
+
+
+/*home*/
+
+.home {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+/* Banner Area */
+
+.carousel {
+  margin-left: 20px;
+  margin-top: -50px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 3rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 1100px;
+  height: 450px;
+}
+
+.carousel_item {
+  flex: 0 0 90%;
+  width: 795px;
+  height: 400px;
+  display: flex; /* Menghilangkan celah kecil di bawah gambar */
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+  scroll-snap-align: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Gradien nutupin setengah gambar dari bawah */
+  pointer-events: none;
+}
+
+
+/*genre name*/
+
+.genre-name {
+  margin-left: -80px;
+  color: var(--yellow);
+  font-size: medium;
+  font-weight: 200;
+}
+
+/*Container genre*/
+.card-slider {
+  margin-left: -100px;
+  display: flex;
+  gap: 15px;               /* Jarak antar kartu */
+  padding: 15px;
+  overflow-x: auto;        /* Mengaktifkan scroll horizontal */
+  scroll-snap-type: x mandatory; 
+  scrollbar-width: none;   /* Sembunyikan scrollbar di Firefox */
+}
+
+/* Sembunyikan scrollbar di Chrome, Safari, dan Edge */
+.card-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 160px;         /* Lebar tiap kartu tetap */
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--black);
+  scroll-snap-align: start;
+  transition: transform 0.2s; /* Sedikit efek saat disentuh */
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 2/3;       /* Rasio standar poster film */
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 8px;
+}
+
+.card-content h3 {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;     /* Judul tidak turun ke bawah */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Judul panjang jadi titik-titik (...) */
+}
+
+.card-content p {
+  font-size: 12px;
+  color: #888;
+  margin: 4px 0 0 0;
+}
+
+
+
+
+
+/* Footer */
+footer {
+  margin-left: -22px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  border-top: 1px solid #333;
+  font-size: 12px;
+  color: #aaa;
+  background: rgba(0,0,0,0.8);
+}
+
+.divider {
+    margin: 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.social-icons i {
+    cursor: pointer;
+}

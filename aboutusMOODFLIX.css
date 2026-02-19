@@ -1,0 +1,398 @@
+:root {
+  --yellow: #f5c518;
+  --black: #141414;
+  --white: #fcfcfb;
+  --gray: #3d3d3d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* Header */
+header {
+    min-height: 67.5px;
+    margin-top: 1px;
+    z-index: 100;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 50px;
+    background: var(--black);
+    box-shadow: 0px 1.5px 1px var(--white);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    color: var(--yellow);
+    font-size: 24px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    position: relative;
+    border: 1px solid #777;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-bar {
+    max-height: 33px;
+}
+
+.search-bar input {
+    margin-top: -10px;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    outline: none;
+    width: 150px;
+}
+
+.header-right i {
+    cursor: pointer;
+    font-size: 18px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--yellow);
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Container Layout */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+/* Sidebar */
+
+.sidebar {
+  position: absolute;
+  width: 72px; /* Lebar awal yang ramping (hanya ikon) */
+  height: 100vh;
+  background-color: var(--black);
+  padding-top: 10px;
+  position: fixed;
+  overflow: hidden; /* Sembunyikan teks yang keluar jalur */
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Efek transisi halus */
+  box-shadow: 1.5px 0 1px var(--white);
+  white-space: nowrap; /* Mencegah teks turun ke bawah saat menyempit */
+  z-index: 100;
+}
+
+/* Saat sidebar di-hover, lebarnya berubah */
+.sidebar:hover {
+  width: 240px;
+}
+
+.nav-item {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px; /* Padding ini menjaga posisi ikon tetap di tengah saat ramping */
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 8px;
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.icon {
+  min-width: 24px; /* Kunci agar ikon tidak gepeng saat sidebar mengecil */
+  margin-right: 24px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--yellow);
+  opacity: 0; /* Teks tidak terlihat saat ramping */
+  transition: opacity 0.2s;
+}
+
+/* Munculkan teks dengan halus saat sidebar di-hover */
+.sidebar:hover .text {
+  opacity: 1;
+  color: var(--black);
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+/* Sembunyikan sub-menu secara default */
+.sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: var(--black);
+  margin: 0 12px;
+  border-radius: 8px;
+}
+
+/* KUNCI: Saat menu-wrapper di-hover, sub-menu terbuka */
+.menu-wrapper:hover .sub-menu {
+  max-height: 200px; /* Beri nilai yang cukup untuk semua item */
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+/* Tambahan: Pastikan sub-menu cuma bisa kebuka kalau sidebar lagi lebar */
+.sidebar:not(:hover) .sub-menu {
+  max-height: 0 !important;
+}
+
+.sub-item {
+  padding: 8px 10px 8px 52px;
+  font-size: 13px;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.sub-item:hover {
+  color: var(--white);
+  text-decoration-thickness: var(--white);
+}
+
+/*About Us Section*/
+
+.about {
+  max-width: 800px;
+  margin: 40px auto 20px; /* jarak ke atas & ke contact dipendekin */
+  padding: 45px 40px;
+  text-align: center;
+
+  background: var(--gray);
+  border-radius: 18px;
+  border: 1px solid var(--white);
+}
+
+.about h1 {
+  margin-top: 10px;
+  font-size: 30px;
+  margin-bottom: 12px;
+  display: inline-block; /* PENTING */
+  position: relative;
+}
+
+.about h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;           /* ngikutin panjang teks */
+  height: 3px;
+  background: gold;
+  border-radius: 10px;
+}
+
+.about p {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+  margin: 40px 0;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  color: gold;
+}
+
+
+form {
+  display: inline-block;
+  background: var(--gray);
+  border: 2px solid var(--white);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+textarea {
+  height: 80px;
+}
+
+button {
+  background: gold;
+  font-weight: bold;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+/* DEVELOPERS */
+.developers {
+  margin-top: 40px;
+  text-align: center;
+  padding: 40px;
+}
+
+.developers h2 {
+    color: gold;
+}
+
+.dev-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.dev-card {
+  background: var(--gray);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--gray);
+  width: 150px;
+}
+
+.dev-card img {
+  width: 110px;
+  border-radius: 10%;
+}
+
+.dev-card p {
+  margin: 10px 0 5px;
+}
+
+.dev-card .icons {
+    color: var(--white);
+}
+
+.dev-card .icons :hover {
+    color: var(--yellow);
+}
+
+
+
+
+/* Footer */
+footer {
+    margin-left: 50px;
+    margin-top: 25px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    border-top: 1px solid #333;
+    font-size: 12px;
+    color: #aaa;
+    background: rgba(0,0,0,0.8);
+}
+
+.divider {
+    margin: 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.social-icons i {
+    cursor: pointer;
+}
