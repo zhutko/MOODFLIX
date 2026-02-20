@@ -130,6 +130,75 @@ nav a {
 
 /* Sidebar */
 
+.sidebar {
+  position: absolute;
+  width: 72px; /* Lebar awal yang ramping (hanya ikon) */
+  height: 100vh;
+  background-color: var(--black);
+  padding-top: 10px;
+  position: fixed;
+  overflow: hidden; /* Sembunyikan teks yang keluar jalur */
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Efek transisi halus */
+  box-shadow: 1.5px 0 1px var(--white);
+  white-space: nowrap; /* Mencegah teks turun ke bawah saat menyempit */
+  z-index: 100;
+}
+
+/* Saat sidebar di-hover, lebarnya berubah */
+.sidebar:hover {
+  width: 240px;
+}
+
+.nav-item {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px; /* Padding ini menjaga posisi ikon tetap di tengah saat ramping */
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 8px;
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.logo-chart {
+  color: var(--yellow);
+}
+
+.text {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--yellow);
+  opacity: 0; /* Teks tidak terlihat saat ramping */
+  transition: opacity 0.2s;
+}
+
+/* Munculkan teks dengan halus saat sidebar di-hover */
+.sidebar:hover .text {
+  opacity: 1;
+  color: var(--black);
+}
+
+.nav-item:hover .logo-chart {
+    color: var(--black);
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+
+
+/* Container pembungkus agar posisi submenu mengacu ke sini */
+.nav-item {
+    position: relative;
+}
 
 
 /*home*/
